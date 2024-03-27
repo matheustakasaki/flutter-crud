@@ -15,9 +15,12 @@ class UserList extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Lista de Usuários'),
         actions: [
-          IconButton(onPressed: (){
-            Navigator.of(context).pushNamed(AppRoutes.userForm);
-          }, icon: const Icon(Icons.add), color: Colors.green)
+          IconButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed(AppRoutes.userForm);
+              },
+              icon: const Icon(Icons.add),
+              color: Colors.green)
         ],
       ),
       body: ListView.builder(
