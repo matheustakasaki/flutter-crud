@@ -4,7 +4,7 @@ import 'package:flutter_crud/provider/users.dart';
 import 'package:provider/provider.dart';
 
 class UserForm extends StatefulWidget {
-  UserForm({super.key});
+  const UserForm({super.key});
 
   @override
   State<UserForm> createState() => _UserFormState();

@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         home: const UserList(),
         debugShowCheckedModeBanner: false,
         routes: {
-          AppRoutes.userForm: (_) => UserForm()
+          AppRoutes.userForm: (_) => const UserForm()
         },
       ),
     );
