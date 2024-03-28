@@ -24,7 +24,7 @@ class _UserFormState extends State<UserForm> {
     }
   }
 
-  @override 
+  @override
   void didChangeDependencies() {
     super.didChangeDependencies();
 
@@ -44,17 +44,20 @@ class _UserFormState extends State<UserForm> {
           IconButton(
               onPressed: () {
                 final formState = _form.currentState;
+
                 if (formState != null) {
                   final isValid = formState.validate();
                   if (isValid) {
-                    _form.currentState?.save();
+                    formState.save();
 
-                    Provider.of<Users>(context, listen: false).put(User(
-                      id: _formData['id']!,
-                      name: _formData['name']!,
-                      email: _formData['email']!,
-                      avatarUrl: _formData['avatarUrl']!,
-                    ));
+                    Provider.of<Users>(context, listen: false).put(
+                      User(
+                        id: _formData['id'],
+                        name: _formData['name']!,
+                        email: _formData['email']!,
+                        avatarUrl: _formData['avatarUrl']!,
+                      ),
+                    );
 
                     Navigator.of(context).pop();
                   }
